@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhupinder Singh – Real Estate & Mortgage Associate in Edmonton</title>
+  <meta name="description" content="Helping Edmonton families buy, sell, and finance homes with confidence. Real Estate & Mortgage services by Bhupinder Singh."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --fg:#0b1221;          /* deep navy */
+      --text:#0f172a;        /* dark text */
+      --muted:#64748b;       /* slate-500 */
+      --brand:#1d4ed8;       /* blue-600 */
+      --brand-2:#0ea5e9;     /* sky-500 */
+      --light:#f1f5f9;       /* slate-100 */
+      --card:#ffffff;
+      --ring: rgba(29,78,216,.25);
+      --shadow: 0 10px 25px rgba(15,23,42,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;padding:.85rem 1.25rem;font-weight:600;border:1px solid transparent;background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+    .btn.secondary{background:#fff;color:var(--brand);border-color:#dbeafe}
+    .btn:hover{filter:brightness(.98)}
+    .tag{display:inline-block;background:#e2e8f0;color:#0f172a;padding:.25rem .6rem;border-radius:999px;font-size:.8rem;font-weight:600}
+    header.topbar{background:#0b1221;color:#cbd5e1;font-size:.9rem}
+    .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 0}
+    .topbar .social{display:flex;gap:.75rem}
+    .icon{width:18px;height:18px;display:inline-block}
+    nav.nav{position:sticky;top:0;background:#fff;z-index:40;border-bottom:1px solid #eef2f7}
+    .nav .row{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;font-size:1.15rem;color:#0f172a}
+    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800}
+    .menu{display:flex;gap:1.25rem;align-items:center}
+    .menu a{color:#0f172a;font-weight:600}
+    .menu .dropdown{position:relative}
+    .menu .dropdown:hover .panel{opacity:1;visibility:visible;transform:translateY(0)}
+    .menu .panel{position:absolute;top:120%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:.5rem;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+    .panel a{display:block;padding:.5rem .75rem;border-radius:10px;white-space:nowrap}
+    .panel a:hover{background:#f8fafc}
+    .hamburger{display:none;flex-direction:column;gap:4px}
+    .hamburger span{width:24px;height:2px;background:#0f172a}
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 10% -10%,#e0f2fe,transparent 60%),radial-gradient(800px 400px at 90% 10%,#dbeafe,transparent 60%),linear-gradient(180deg,#ffffff, #f8fafc 60%)}
+    .hero .row{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:2rem;padding:clamp(2rem,5vw,4rem) 0}
+    .pill{display:inline-flex;gap:.5rem;align-items:center;background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;padding:.35rem .6rem;border-radius:999px;font-weight:700;font-size:.78rem}
+    h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:.6rem 0 1rem;font-weight:800;color:#0f172a}
+    .lede{font-size:1.05rem;color:#475569;max-width:58ch}
+    .hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.25rem}
+    .hero-figure{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e5e7eb;background:#fff;position:relative}
+    .hero-figure .placeholder{aspect-ratio:4/3;display:grid;place-items:center;color:#94a3b8}
+    /* Stats / Reasons */
+    .section{padding:clamp(2rem,5vw,4rem) 0}
+    .section .head{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.2rem}
+    .kicker{font-weight:800;color:#0ea5e9;letter-spacing:.08em}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .card{background:var(--card);border:1px solid #eef2f7;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .card h3{margin:.2rem 0 .4rem}
+    .muted{color:#64748b}
+    /* Services */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .service .iconbox{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#eff6ff,#dbeafe);display:grid;place-items:center;border:1px solid #e5e7eb}
+    .service h4{margin:.6rem 0 .4rem}
+    /* Listings */
+    .listing{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .home{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+    .home .img{aspect-ratio:4/3;background:#f1f5f9;display:grid;place-items:center;color:#94a3b8}
+    .home .body{padding:.8rem}
+    .home .meta{display:flex;gap:1rem;color:#64748b;font-size:.92rem}
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    blockquote{background:#fff;border:1px solid #e5e7eb;padding:1rem;border-radius:16px;box-shadow:var(--shadow);font-size:.98rem}
+    blockquote footer{margin-top:.75rem;color:#64748b}
+    /* Lenders */
+    .lenders{display:grid;grid-template-columns:repeat(7,1fr);gap:.75rem}
+    .logo-tile{aspect-ratio:16/9;border:1px dashed #e5e7eb;border-radius:14px;display:grid;place-items:center;color:#94a3b8;background:#fff}
+    /* FAQ */
+    .faq{display:grid;grid-template-columns:1fr;gap:.75rem}
+    details{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1rem}
+    summary{cursor:pointer;font-weight:700}
+    /* CTA band */
+    .band{background:linear-gradient(90deg,#1d4ed8,#0ea5e9);color:#fff;border-radius:20px;padding:1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    /* Form */
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+    form .full{grid-column:1/-1}
+    input,textarea{width:100%;padding:.8rem;border:1px solid #e5e7eb;border-radius:12px;outline:0}
+    input:focus,textarea:focus{border-color:#bfdbfe;box-shadow:0 0 0 4px var(--ring)}
+    textarea{min-height:120px;resize:vertical}
+    /* Footer */
+    footer{background:#0b1221;color:#cbd5e1;margin-top:2rem}
+    footer a{color:#cbd5e1}
+    footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:1rem}
+    footer .cap{font-size:.9rem;color:#94a3b8}
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .row{grid-template-columns:1fr;}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+      .grid-3,.listing,.testimonials{grid-template-columns:repeat(2,1fr)}
+      .lenders{grid-template-columns:repeat(4,1fr)}
+      footer .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 680px){
+      .menu{display:none}
+      .hamburger{display:flex}
+      .grid-4,.grid-3,.listing,.testimonials{grid-template-columns:1fr}
+      .lenders{grid-template-columns:repeat(3,1fr)}
+      form{grid-template-columns:1fr}
+      .band{flex-direction:column;align-items:start}
+    }
+  </style>
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container">
+      <div class="row">
+        <div>
+          <strong>Call:</strong> <a href="tel:+17808620740" style="color:#fff">+1 (780) 862-0740</a>
+          &nbsp;•&nbsp;
+          <strong>Email:</strong> <a href="mailto:info@bhupindersinghrealestateandmortgage.ca" style="color:#fff">info@bhupindersinghrealestateandmortgage.ca</a>
+        </div>
+        <div class="social" aria-label="social links">
+          <a href="https://www.facebook.com" aria-label="Facebook">🔗</a>
+          <a href="https://www.instagram.com" aria-label="Instagram">🔗</a>
+          <a href="https://www.linkedin.com" aria-label="LinkedIn">🔗</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="#">
+          <span class="logo">BS</span>
+          <span>Bhupinder Singh</span>
+        </a>
+        <div class="menu" role="navigation" aria-label="primary">
+          <a href="#home">Home</a>
+          <div class="dropdown">
+            <a href="#services">Services ▾</a>
+            <div class="panel" role="menu">
+              <a href="#services">Buy & Sell Residential</a>
+              <a href="#services">Commercial & Rural</a>
+              <a href="#services">Mortgage Approval</a>
+              <a href="#services">Mortgage Refinance</a>
+            </div>
+          </div>
+          <a href="#listings">Listings</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn" href="https://wa.me/17808620740" target="_blank" rel="noopener">Apply Now</a>
+        </div>
+        <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="pill">Edmonton • Real Estate & Mortgage</span>
+          <h1>Helping Edmonton families buy, sell, and finance homes with confidence.</h1>
+          <p class="lede">I’m <strong>Bhupinder Singh</strong>, your local Real Estate & Mortgage Associate. From pre‑approval to closing, I guide you with clear steps, honest advice, and proven results.</p>
+          <div class="cta">
+            <a class="btn" href="https://wa.me/17808620740" target="_blank" rel="noopener">Get Your Free Consultation</a>
+            <a class="btn secondary" href="#contact">Talk to an Expert</a>
+          </div>
+        </div>
+        <div class="hero-figure">
+          <div class="placeholder">Hero Image / Banner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reasons / Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Why choose Bhupinder</span>
+        <h2>Proven results that move you faster</h2>
+        <p class="muted">Helping Edmonton families find the right homes and mortgages since 2015.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card">
+          <span class="tag">01</span>
+          <h3>We Sell More Homes</h3>
+          <p class="muted">Over 10× the average agent so we can do more to sell your home.</p>
+        </div>
+        <div class="card">
+          <span class="tag">02</span>
+          <h3>Your Home Sells Faster</h3>
+          <p class="muted">Average time to sell is 34 days—over 40% faster than average.*</p>
+        </div>
+        <div class="card">
+          <span class="tag">03</span>
+          <h3>Buyers in Waiting</h3>
+          <p class="muted">A database of 3,400+ buyers looking right now in the area.</p>
+        </div>
+        <div class="card">
+          <span class="tag">04</span>
+          <h3>Get More Money</h3>
+          <p class="muted">Homes sell for an average of 98% of the asking price.*</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">About</span>
+        <h2>I’m Bhupinder Singh, your trusted Real Estate & Mortgage Associate in Edmonton</h2>
+      </div>
+      <p class="muted">I help buyers and sellers find the right homes, sell for the best value, and secure the right financing. By combining real estate knowledge with mortgage support, I provide complete guidance for your property journey in Edmonton.</p>
+      <div class="cta" style="margin-top:1rem">
+        <a class="btn" href="https://wa.me/17808620740" target="_blank" rel="noopener">Get Your Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section" style="background:#f8fafc">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Services</span>
+        <h2>Services We Offer</h2>
+        <p class="muted">Mortgage guidance and real estate expertise for every step.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card service">
+          <div class="iconbox">🏠</div>
+          <h4>Buy & Sell Residential Property</h4>
+          <p class="muted">Navigate offers, pricing, and negotiations with confidence.</p>
+          <p><a href="#contact">Learn More →</a></p>
+        </div>
+        <div class="card service">
+          <div class="iconbox">🏢</div>
+          <h4>Commercial & Rural Real Estate</h4>
+          <p class="muted">From retail to acreage—get tailored advice that fits.</p>
+          <p><a href="#contact">Learn More →</a></p>
+        </div>
+        <div class="card service">
+          <div class="iconbox">💳</div>
+          <h4>Mortgage Approval & Refinance</h4>
+          <p class="muted">Compare lenders, rates, and terms to suit your goals.</p>
+          <p><a href="#contact">Learn More →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings (static placeholders) -->
+  <section id="listings" class="section">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Discover Listings</span>
+        <h2>The latest Edmonton homes</h2>
+        <p class="muted">Example cards—replace with your live feed or MLS embed.</p>
+      </div>
+      <div class="listing">
+        <article class="home">
+          <div class="img">Image</div>
+          <div class="body">
+            <h3>$310,000 · 65 603 Watt Boulevard, Edmonton</h3>
+            <div class="meta"><span>2 Beds</span><span>2 Baths</span><span>1,336 SqFt</span></div>
+            <div class="meta"><span>Condo / Townhouse</span><span>MLS® # E4457151</span></div>
+          </div>
+        </article>
+        <article class="home">
+          <div class="img">Image</div>
+          <div class="body">
+            <h3>$619,900 · 1624 Erker Way, Edmonton</h3>
+            <div class="meta"><span>3 Beds</span><span>3 Baths</span><span>1,850 SqFt</span></div>
+            <div class="meta"><span>Single Family</span><span>MLS® # E4457152</span></div>
+          </div>
+        </article>
+        <article class="home">
+          <div class="img">Image</div>
+          <div class="body">
+            <h3>$499,999 · 65 603 Watt Boulevard, Edmonton</h3>
+            <div class="meta"><span>2 Beds</span><span>2 Baths</span><span>1,336 SqFt</span></div>
+            <div class="meta"><span>Condo / Townhouse</span><span>MLS® # E4457153</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:#f8fafc">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Testimonials</span>
+        <h2>What my clients say</h2>
+      </div>
+      <div class="testimonials">
+        <blockquote>
+          “Very knowledgeable and patient. He truly listens and provides honest advice.”
+          <footer>— Nirmal Devi · Google Review</footer>
+        </blockquote>
+        <blockquote>
+          “Guided me through the process with professionalism. Smooth and stress‑free.”
+          <footer>— Halsey Aesthetic · Google Review</footer>
+        </blockquote>
+        <blockquote>
+          “Outstanding experience! The team went above and beyond. Highly recommended.”
+          <footer>— Kannu Radhe · Google Review</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action bands -->
+  <section class="section">
+    <div class="container">
+      <div class="band">
+        <div>
+          <h3 style="margin:.2rem 0">We Sell More Homes</h3>
+          <p style="margin:0;opacity:.9">Start your home journey with confidence.</p>
+        </div>
+        <a class="btn" href="https://wa.me/17808620740" target="_blank" rel="noopener">Apply for Pre‑Approval</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lenders Logos (placeholders) -->
+  <section class="section" style="background:#f8fafc">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Partners</span>
+        <h2>Proudly working with Canada’s trusted lenders</h2>
+      </div>
+      <div class="lenders">
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+        <div class="logo-tile">Logo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What areas of Edmonton do you serve?</summary>
+          <p>I help clients across Edmonton—South, West, Downtown—and nearby communities.</p>
+        </details>
+        <details>
+          <summary>How do you help me buy a home?</summary>
+          <p>We start with a consultation and pre‑approval, then view homes that fit, and I guide you through to closing.</p>
+        </details>
+        <details>
+          <summary>Do you assist first‑time buyers?</summary>
+          <p>Yes. I explain each step in simple terms to make the process stress‑free.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" style="background:#f8fafc">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Get in touch</span>
+        <h2>Let’s get started</h2>
+        <p class="muted">Find the right mortgage with Bhupinder Singh in Edmonton.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');">
+        <div>
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" required placeholder="Jane Doe" />
+        </div>
+        <div>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" required placeholder="(+1) 555‑123‑4567" />
+        </div>
+        <div class="full">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" placeholder="Tell me what you need…"></textarea>
+        </div>
+        <div class="full">
+          <button class="btn" type="submit">Book a Free Consultation</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container section">
+      <div class="cols">
+        <div>
+          <div class="brand"><span class="logo">BS</span><span>Bhupinder Singh</span></div>
+          <p class="cap">Real Estate & Mortgage Associate<br>AB Registration Date: 2025/01/08<br>Corporate Access No: 2026763223 · Business No: 789249968</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="#about">About Us</a><br>
+             <a href="#contact">Contact Us</a><br>
+             <a href="#">Blog</a><br>
+             <a href="#">Sitemap</a></p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <p><a href="#services">Buy/Sell Residential</a><br>
+             <a href="#services">Mortgage & Lending</a><br>
+             <a href="#services">Commercial & Rural</a><br>
+             <a href="#services">Refinance</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>+1 (780) 862‑0740<br>
+             <a href="mailto:info@bhupindersinghrealestateandmortgage.ca">info@bhupindersinghrealestateandmortgage.ca</a><br>
+             Edmonton, AB</p>
+          <p>
+            <a class="btn" href="https://wa.me/17808620740" target="_blank" rel="noopener">Call / Text</a>
+          </p>
+        </div>
+      </div>
+      <p class="cap" style="margin-top:1rem">© 2025 · Bhupinder Singh – Real Estate & Mortgage Associate in Edmonton · All Rights Reserved · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    btn?.addEventListener('click',() => {
+      const m = document.querySelector('.menu');
+      m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
